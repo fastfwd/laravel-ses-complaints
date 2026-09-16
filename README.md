@@ -17,16 +17,33 @@ defined in the [config file](#config-file), it stops the email sending process o
 
 Before the installation process, please refer to the version mapping table below to ascertain compatibility between `laravel-ses-complaints` package version and your Laravel application:
 
-| Package Version | Laravel Version |
-|-----------------|-----------------|
-| v1.0.0          | 9 & 10          |
-| v0.0.4          | 9               |
-| v0.0.3          | 9               |
-| v0.0.2          | 8               |
+| Package Version | Laravel Version | PHP     |
+|-----------------|-----------------|---------|
+| v1.0.1          | 9, 10, 11 & 12  | ^8.3    |
+| v1.0.0          | 9 & 10          | ^8.0    |
+| v0.0.4          | 9               |         |
+| v0.0.3          | 9               |         |
+| v0.0.2          | 8               |         |
 
 Ensure you select the appropriate version that corresponds with your Laravel version to guarantee full functionality and compatibility.
 
-You can install the package via composer:
+This is the [fastfwd fork](https://github.com/fastfwd/laravel-ses-complaints) of `oza75/laravel-ses-complaints`. Install via Composer VCS repository:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/fastfwd/laravel-ses-complaints"
+        }
+    ],
+    "require": {
+        "oza75/laravel-ses-complaints": "^1.0"
+    }
+}
+```
+
+Or require the Packagist original (Laravel 9–10 only):
 
 ```bash
 composer require oza75/laravel-ses-complaints
